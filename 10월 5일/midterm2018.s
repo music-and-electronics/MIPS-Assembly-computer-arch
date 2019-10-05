@@ -5,6 +5,7 @@ ptr3: .asciiz " "
 ptr4: .asciiz "\n"
 .text
 .globl main
+
 main:
     la    $a0,ptr1
     la    $t0,ptr2
