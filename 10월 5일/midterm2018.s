@@ -7,8 +7,8 @@ ptr4: .asciiz "\n"
 .globl main
 
 main:
-    la    $a0,ptr1
-    la    $t0,ptr2
+    la    $a0,ptr1 
+    la    $t0,ptr2 
     lw    $t0,0($t0)
     sll   $t0,$t0,2
     addi  $t0,$t0,-4
