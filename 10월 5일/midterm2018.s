@@ -63,3 +63,10 @@ label8:
     beq   $t0,$a1,label9
     addi  $t0,$t0,4
     lw    $t1,0($t0)
+    slt   $t2,$t1,$v1
+    beq   $t2,$zero,label8
+    addi  $v0,$t0,0
+    addi  $v1,$t1,0
+    j     label8
+label9:
+    jr    $ra
