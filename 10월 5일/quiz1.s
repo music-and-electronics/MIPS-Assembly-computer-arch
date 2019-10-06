@@ -22,31 +22,23 @@ main:
     jal   label1
     li    $v0,10
     syscall
-
 label1:
     addi  $t0,$a0,0
-
 label2:
     blt   $a1,$t0,label3
-
     lw    $a0, 0($t0)
     li    $v0,1
     syscall
-    
     la    $a0,ptr3
     li    $v0,4
     syscall
-
     addi  $t0,$t0,4
     j     label2
-
 label3:
     jr    $ra
-
 label4:
     sw    $ra,-8($sp)
     sw    $a1,-4($sp)
-
 label5:
     beq   $a0,$a1,label6
     jal   label7
@@ -55,17 +47,14 @@ label5:
     sw    $v1,0($a0)
     addi  $a0,$a0,4
     j     label5
-
 label6:
     lw    $ra,-8($sp)
     lw    $a1,-4($sp)
     jr    $ra
-
 label7:
     addi  $t0,$a0,0
     addi  $v0,$a0,0
     lw    $v1,0($a0)
-
 label8:
     beq   $t0,$a1,label9
     addi  $t0,$t0,4
